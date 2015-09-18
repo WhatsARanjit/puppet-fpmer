@@ -5,7 +5,7 @@
 1. [Overview](#overview)
 1. [Usage](#usage)
   1. [Class fpmer](#class-fpmer)
-  1. [Defined type te:fpm::build](#defined-type-fpmerbuild)
+  1. [Defined type fpmer::build](#defined-type-fpmerbuild)
     1. [Examples](#examples)
     1. [Parameters](#parameters)
 
@@ -29,6 +29,7 @@ This does the following:
 
 * install git
 * install rpm-build
+* install ruby-devel
 * install fpm gem
 
 ###Defined type fpmer::build
@@ -71,15 +72,9 @@ __package__:
 
 Name of the package to be created. _Default_: `$title`
 
-__source__:
-
-The FPM source for the package. _Default_: 'dir'
-
-Complete list of sources: https://github.com/jordansissel/fpm#things-that-are-in-the-works-or-should-work
-
 __arch__:
 
-Architecture can be specified if package is not agnostic.  'all' is used for agnostic packages. __Default__: 'all'
+Architecture can be specified if package is not agnostic.  'all' is used for agnostic packages. _Default_: 'all'
 
 __type__:
 
@@ -94,4 +89,4 @@ Where on disk you want the final package to be deposited.  _Default_: '/tmp'
 
 __provider__:
 
-The type of input from the source.  Valid values are `git`, `svn`, `gz`, `tar`, `zip`, and `local`.  __Default__: 'local'
+The type of input from the source.  Valid values are `git`, `svn`, `gz`, `tar`, `zip`, and `local`.  _Default_: 'local'
